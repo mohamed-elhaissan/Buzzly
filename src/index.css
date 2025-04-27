@@ -1,27 +1,33 @@
 @import "tailwindcss";
-* {
- box-sizing: border-box;
- font-family: 'Thicccboi';
-}
 
-
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 
 @font-face {
- font-family: 'Thicccboi';
- src: url('./font/THICCCBOI-Medium.ttf') format('truetype');
+    font-family: 'Thicccboi';
+    src: url('./font/THICCCBOI-Medium.ttf') format('truetype');
 }
+
+* {
+    box-sizing: border-box;
+    font-family: 'Thicccboi';
+}
+
+.codeBlock {
+    font-family: "Fira Code", monospace;
+}
+
 body {
- height: 100vh;
+    height: 100vh;
 }
 
- :root {
-  --gray : #f0f0f0;
-  --bg-light : #ffffff;
-  --bg-dark : #000000;
- }
+:root {
+    --gray: #f0f0f0;
+    --bg-light: #ffffff;
+    --bg-dark: #000000;
+}
 
- .dark{
-  --bg-light : #000000;
-  --bg-dark : #ffffff;
-  --gray : #1a1a1a;
- }
+.dark {
+    --bg-light: #000000;
+    --bg-dark: #ffffff;
+    --gray: #1a1a1a;
+}
