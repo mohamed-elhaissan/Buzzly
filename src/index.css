@@ -1,11 +1,18 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
-body {
- font-family: 'Inter', sans-serif;
- background: #1A1A19;
+* {
+ box-sizing: border-box;
+ font-family: 'Thicccboi';
 }
 
+
+
+@font-face {
+ font-family: 'Thicccboi';
+ src: url('./font/THICCCBOI-Medium.ttf') format('truetype');
+}
+body {
+ height: 100vh;
+}
 
  :root {
   --gray : #f0f0f0;
