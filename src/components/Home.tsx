@@ -1,11 +1,10 @@
 import {Link} from "react-router-dom";
 import {useCallback, useState} from "react";
 import {BiCheck} from 'react-icons/bi';
-
 const Home = () => {
     const [isCopied, setIsCopied] = useState<boolean>(false);
 
-
+    // this function for copy button !
     const copyText = useCallback(() => {
         navigator.clipboard.writeText('npm install Buzzly').then(() => {
             setIsCopied(true);
@@ -16,6 +15,11 @@ const Home = () => {
             console.log("error")
         })
     }, [isCopied])
+
+
+    // this section for style the code block
+
+
     return (
         <div className='flex items-center justify-start  flex-col   h-screen'>
             <div className='w-full flex flex-col items-center justify-center mt-52 '>
@@ -41,7 +45,7 @@ const Home = () => {
                         <h2 className='font-semibold text-black mb-2'>Installation</h2>
                         <div
                             className='bg-[#FCFCFC] border border-[#e4e4e7] flex justify-between items-center p-2 px-5 rounded'>
-                            <p className='codeBlock'><span className=''>npm</span> install Buzzly </p>
+                            <p className='codeBlock'><span className='text-[#6F42C1]'>npm</span> install Buzzly </p>
                             {
                                 isCopied ? <BiCheck className='text-green-500 rounded'/> :
                                     <svg onClick={copyText} className='cursor-pointer' viewBox="0 0 24 24" width="14"
@@ -65,23 +69,28 @@ const Home = () => {
                             className='bg-[#FCFCFC] border border-[#e4e4e7] flex justify-between items-center p-2 px-5 rounded'>
                             <div>
                                 <p className='codeBlock'><span
-                                    className='text-[#D73A49] font-semibold codeBlock'>import</span> {"      { Toaster,Toast }    "}
-                                    <span className='text-[#D73A49] font-semibold codeBlock'>from</span> {"   'Buzzly'  "}</p>
+                                    className='text-[#D73A49] font-semibold codeBlock'>import</span> {"      { Toaster, Toast }    "}
+                                    <span
+                                        className='text-[#D73A49] font-semibold codeBlock'>from</span> {"   'Buzzly'  "}
+                                </p>
                                 <p className='my-3'>{"// ..."}</p>
+                                <p className='my-3 codeBlock '><span
+                                    className='text-[#D73A49] font-semibold'>function</span>{" App() {"}</p>
                                 <pre>
-                                    <code className='codeBlock'>
-                                        {`function App() {
-  return (
-    <div>
-      <Toaster />
-      <button onClick={() => toast('My first toast')}>
-        Give me a toast
-      </button>
-    </div>
-  )
-}`}
+                                    <code className=' codeBlock'>
+                                        {'  '}<span className="text-[#D73A49] font-semibold ">return</span> ({'\n'}
+                                        {'    <'}<span className='text-[#22863A]'>div</span>{'>\n'}
+                                        {'      <'}<span className='text-[#22863A]'>Toaster</span> {'/> \n'}
+                                        {'      <'}<span
+                                        className='text-[#22863A]'>button</span> {'onClick={() => toast(\'My first toast\')}>'}{'\n'}
+                                        {'          '}Give me a  Toast{"\n"}
+                                        {'      </'}<span className='text-[#22863A]'>button</span>{'>\n'}
+                                        {'    </'}<span className='text-[#22863A]'>div</span>{'>\n'}
+                                        {'  '});{'\n'}
+                                        {'}'}
                                     </code>
                                 </pre>
+
                             </div>
 
 

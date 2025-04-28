@@ -1,22 +1,26 @@
 @import "tailwindcss";
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 
 @font-face {
     font-family: 'Thicccboi';
     src: url('./font/THICCCBOI-Medium.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'jetBrains';
+    src: url('./font/JetBrainsMono-Regular.ttf') format('truetype');
+}
 
 * {
     box-sizing: border-box;
-    font-family: 'Thicccboi';
 }
 
 .codeBlock {
-    font-family: "Fira Code", monospace;
+    font-family: 'jetBrains';
+    font-optical-sizing: auto;
 }
 
 body {
+    font-family: 'Thicccboi';
     height: 100vh;
 }
 
