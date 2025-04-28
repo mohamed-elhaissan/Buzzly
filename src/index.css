@@ -5,6 +5,7 @@
     font-family: 'Thicccboi';
     src: url('./font/THICCCBOI-Medium.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'jetBrains';
     src: url('./font/JetBrainsMono-Regular.ttf') format('truetype');
@@ -17,6 +18,11 @@
 .codeBlock {
     font-family: 'jetBrains';
     font-optical-sizing: auto;
+}
+
+.codeText {
+    font-family: 'jetBrains';
+
 }
 
 body {
