@@ -17,7 +17,7 @@ const Others = () => {
 
 
     return (
-        <section className='w-1/3 mb-52'>
+        <section className='w-1/3 mb-52 sm:w-[80%] xl:w-1/2 2xl:w-1/3'>
             <div>
                 <h2 className='font-semibold  mb-2'>Others</h2>
 
@@ -52,7 +52,7 @@ const Others = () => {
                                     className='bg-[#FCFCFC] border mt-5 w-full border-[#e4e4e7] flex justify-between items-center py-4 px-5 rounded'>
                             {
                                 isActivatedButton.snippet ? (
-                                    <motion.p
+                                    <motion.span
                                         variants={itemVariants}
                                         initial="closed"
                                         animate="open"
@@ -66,7 +66,7 @@ const Others = () => {
                                             </code>
                                         </pre>
 
-                                    </motion.p>
+                                    </motion.span>
                                 ) : <motion.p
                                     variants={itemVariants}
                                     initial="closed"

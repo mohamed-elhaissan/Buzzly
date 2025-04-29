@@ -7,7 +7,7 @@ export default function Position() {
     const [activatedButton, setActivatedButton] = useState<string>(positions[0]);
     const [isCLickedButton, setIsCLickedButton] = useState<number>(0);
     return (
-        <section className='w-1/3 mb-4'>
+        <section className='w-1/3 mb-4 sm:w-[80%] xl:w-1/2 2xl:w-1/3'>
             <div>
                 <h2 className='font-semibold  mb-2'>Position</h2>
 

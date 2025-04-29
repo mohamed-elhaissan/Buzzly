@@ -2,7 +2,7 @@ import CopyButton from "./CopyButton.tsx";
 
 export default function Installation() {
     return (
-        <section className='w-1/3 mb-4 '>
+        <section className='w-1/3 mb-4 sm:w-[80%] xl:w-1/2 2xl:w-1/3'>
             <div>
                 <h2 className='font-semibold text-black mb-2'>Installation</h2>
                 <div

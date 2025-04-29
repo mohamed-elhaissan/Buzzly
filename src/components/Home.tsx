@@ -1,4 +1,4 @@
-
+import {useScroll, motion} from "framer-motion";
 import Types from "./Types.tsx";
 import Installation from "./Installation.tsx";
 import Usage from "./Usage.tsx";
@@ -7,28 +7,54 @@ import Position from "./Position.tsx";
 import Expand from "./Expand.tsx";
 import Others from "./Others.tsx";
 import Footer from "./Footer.tsx";
+import {useEffect, useState} from "react";
+import Loading from "./Loading.tsx";
 
 const Home = () => {
+    const [isLoading, setIsLoading] = useState<boolean>(true);
+    const {scrollYProgress} = useScroll();
 
-    // this function for copy button !
 
+    useEffect(() => {
 
-    // this section for style the code block
+        //check if the page is full loaded
+        if (document.readyState === "complete") {
+            setIsLoading(false);
+        } else {
+            window.addEventListener("load", () => {
+                setIsLoading(false);
+            });
+        }
+
+        return () => window.removeEventListener("load", () => {
+            setIsLoading(false);
+        });
+    }, []);
 
 
     return (
-        <div className='flex items-center justify-start  flex-col   h-screen selection:bg-[#DBDBDB]'>
-            <div className='w-full flex flex-col items-center justify-center mt-52 gap-[56px] '>
-                <Hero/>
-                <Installation/>
-                <Usage/>
-                <Types/>
-                <Position/>
-                <Expand />
-                <Others/>
-                <Footer/>
-            </div>
-        </div>
+        <>
+            {isLoading ? (<Loading/>) : (
+                <div className='flex items-center justify-start   flex-col   h-screen selection:bg-[#DBDBDB]'>
+                    <motion.div className='fixed top-0 left-0 right-0 h-[10px] origin-bottom rounded-full bg-[#ff0088]'
+                                style={{
+                                    scaleX: scrollYProgress,
+
+                                }}
+                    />
+                    <div className='w-full flex flex-col items-center justify-center mt-52 gap-[56px] '>
+                        <Hero/>
+                        <Installation/>
+                        <Usage/>
+                        <Types/>
+                        <Position/>
+                        <Expand/>
+                        <Others/>
+                        <Footer/>
+                    </div>
+                </div>
+            )}
+        </>
     )
 }
 export default Home;

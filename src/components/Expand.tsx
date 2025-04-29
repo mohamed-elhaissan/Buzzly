@@ -8,7 +8,7 @@ export default function () {
 
 
     return (
-        <section className='w-1/3 '>
+        <section className='w-1/3 sm:w-[80%] xl:w-1/2 2xl:w-1/3 '>
             <div>
                 <h2 className='font-semibold  mb-2'>Expand</h2>
 
