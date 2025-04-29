@@ -11,19 +11,20 @@
     src: url('./font/JetBrainsMono-Regular.ttf') format('truetype');
 }
 
+
 * {
     box-sizing: border-box;
 }
 
 .codeBlock {
     font-family: 'jetBrains';
-    font-optical-sizing: auto;
 }
 
 .codeText {
     font-family: 'jetBrains';
 
 }
+
 
 body {
     font-family: 'Thicccboi';

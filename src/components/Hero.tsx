@@ -13,11 +13,11 @@ export default function Hero(){
                 </button>
                 <Link
                     className='bg-[#FFFFFF] cursor-pointer text-black shadow-sm py-2 px-6 text-center   rounded w-full '
-                    to={'/https://github.com/mohamed-elhaissan/Buzzly'}>Github</Link>
+                    to={'https://github.com/mohamed-elhaissan/Buzzly'} target={"_blank"}>Github</Link>
             </div>
             <div className={'w-full text-center mt-4'}>
 
-                <Link to={"/documentation"} className='text-[#6f6f6f]  underline '>Documentation</Link>
+                <Link to={"/documentation"} className='text-[#6f6f6f]  underline ' target={"_blank"}>Documentation</Link>
             </div>
         </section>
     )

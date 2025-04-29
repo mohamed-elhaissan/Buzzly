@@ -1,42 +1,34 @@
 import {useState} from "react";
-import CopyButton from "./CopyButton.tsx";
 import {motion} from "framer-motion";
+import CopyButton from "./CopyButton.tsx";
 
 
-interface TypesSnippet {
-    name: string,
-    snippet: string
-}
-
-const Types = () => {
-    const [isActivatedButton, setIsActivatedButton] = useState<TypesSnippet>(allTypes[0]);
-    const [isCLickedButton, setIsCLickedButton] = useState<number>(0);
+export default function () {
+    const [actived, setActived] = useState<string>("default");
 
 
     return (
-        <section className='w-1/3 mb-4'>
+        <section className='w-1/3 '>
             <div>
-                <h2 className='font-semibold  mb-2'>Types</h2>
+                <h2 className='font-semibold  mb-2'>Expand</h2>
 
-                <p>You can customize the type of toast you want to render, and pass an options object as the
-                    second argument.</p>
+                <p>You can change the amount of toasts visible through the prop.</p>
 
                 <div className='mt-4   flex items-center gap-3  flex-wrap w-full'>
                     {
-                        allTypes.map((type: any, index: number) => (
+                        expands.map((item: string, index: number) => (
                             <div key={index}>
                                 <button
                                     onClick={() => {
-                                        setIsCLickedButton(index)
-                                        setIsActivatedButton(type)
+                                        setActived(item)
                                     }}
                                     style={{
-                                        backgroundColor: isCLickedButton === index ? "#F3F3F3" : '#fcfcfc',
-                                        borderColor: isCLickedButton !== index ? "#F3F3F3" : '#dbdbdb',
+                                        backgroundColor: actived === item ? "#F3F3F3" : '#fcfcfc',
+                                        borderColor: actived !== item ? "#F3F3F3" : '#dbdbdb',
                                     }}
-                                    className='codeText text-sm   hover:bg-[#F3F3F3] transition duration-75 ease-in p-2 px-4 rounded cursor-pointer border border-[#f3f3f3]'
+                                    className='codeText text-sm   hover:bg-[#F3F3F3] transition duration-75 ease-in p-2 px-4 rounded cursor-pointer border border-[#dbdbdb]'
                                 >
-                                    {type.name}
+                                    {item}
                                 </button>
 
                             </div>
@@ -49,13 +41,15 @@ const Types = () => {
                                     animate="open"
                                     className='bg-[#FCFCFC] border mt-5 w-full border-[#e4e4e7] flex justify-between items-center py-4 px-5 rounded'>
                             {
-                                isActivatedButton.snippet ? (
+                                actived ? (
                                     <motion.p
                                         variants={itemVariants}
                                         initial="closed"
                                         animate="open"
-                                        className='codeBlock text-sm'><span
-                                        className="text-[#D73A49]">toast</span>{isActivatedButton.snippet}
+                                        className='codeBlock text-sm'>{`<`}<span
+                                        className="text-[#D73A49]">Toaster</span> <span
+                                        className='text-[#6f6f6f]'>expand=</span>{`{${actived == "expand"}`}<span
+                                        className='text-[#6f6f6f]'>{`} />`}</span>
                                     </motion.p>
                                 ) : <motion.p
                                     variants={itemVariants}
@@ -65,16 +59,14 @@ const Types = () => {
                                     Oops! Something went wrong
                                 </motion.p>
                             }
-                            <CopyButton text={isActivatedButton.snippet}/>
+                            <CopyButton text={`<Toaster expand={${actived == "expand"} />`}/>
                         </motion.div>
                     }
                 </div>
             </div>
         </section>
-
     )
 }
-export default Types;
 
 const itemVariants = {
     open: {
@@ -95,32 +87,5 @@ const itemVariants = {
     },
 }
 
-const allTypes = [
-    {
-        name: 'Default',
-        snippet: `('Event has been created')`,
 
-    },
-    {
-        name: 'Description',
-        snippet: `.message('Event has been created', {
-  description: 'Monday, January 3rd at 6:00pm',
-})`,
-
-    },
-    {
-        name: 'Success',
-        snippet: `.success('Event has been created')`,
-    },
-    {
-        name: 'Info',
-        snippet: `.info('Be at the area 10 minutes before the event time')`,
-    },
-    {
-        name: 'Warning',
-        snippet: `.warning('Event start time cannot be earlier than 8am')`,
-    },
-    {
-        name: 'Error',
-        snippet: `.error('Event has not been created')`,
-    },]
+const expands = ['default', 'expand']

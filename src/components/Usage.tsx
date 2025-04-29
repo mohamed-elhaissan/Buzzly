@@ -6,7 +6,7 @@
 
 export default function Usage() {
     return (
-        <section className='w-1/3 mt-20'>
+        <section className='w-1/3 mb-4'>
             <div>
                 <h2 className='font-semibold  mb-2'>Usage</h2>
 

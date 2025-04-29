@@ -1,6 +1,9 @@
 import {useState} from "react";
 import CopyButton from "./CopyButton.tsx";
 import {motion} from "framer-motion";
+import {BiCheck} from "react-icons/bi";
+import { FaInfoCircle } from 'react-icons/fa';
+import { FaExclamationTriangle } from 'react-icons/fa'; // FontAwesome
 
 
 interface TypesSnippet {
@@ -8,35 +11,34 @@ interface TypesSnippet {
     snippet: string
 }
 
-const Types = () => {
+const Others = () => {
     const [isActivatedButton, setIsActivatedButton] = useState<TypesSnippet>(allTypes[0]);
     const [isCLickedButton, setIsCLickedButton] = useState<number>(0);
 
 
     return (
-        <section className='w-1/3 mb-4'>
+        <section className='w-1/3 mb-52'>
             <div>
-                <h2 className='font-semibold  mb-2'>Types</h2>
+                <h2 className='font-semibold  mb-2'>Others</h2>
 
-                <p>You can customize the type of toast you want to render, and pass an options object as the
-                    second argument.</p>
+                <p>You can use more</p>
 
                 <div className='mt-4   flex items-center gap-3  flex-wrap w-full'>
                     {
-                        allTypes.map((type: any, index: number) => (
+                        allTypes.map((item: any, index: number) => (
                             <div key={index}>
                                 <button
                                     onClick={() => {
                                         setIsCLickedButton(index)
-                                        setIsActivatedButton(type)
+                                        setIsActivatedButton(item)
                                     }}
                                     style={{
-                                        backgroundColor: isCLickedButton === index ? "#F3F3F3" : '#fcfcfc',
+                                        backgroundColor: isCLickedButton === index ? item.fill : '#fcfcfc',
                                         borderColor: isCLickedButton !== index ? "#F3F3F3" : '#dbdbdb',
                                     }}
                                     className='codeText text-sm   hover:bg-[#F3F3F3] transition duration-75 ease-in p-2 px-4 rounded cursor-pointer border border-[#f3f3f3]'
                                 >
-                                    {type.name}
+                                    {item.name}
                                 </button>
 
                             </div>
@@ -56,6 +58,14 @@ const Types = () => {
                                         animate="open"
                                         className='codeBlock text-sm'><span
                                         className="text-[#D73A49]">toast</span>{isActivatedButton.snippet}
+                                        <pre>
+                                            <code className='text-[#6f6f6f] codeText'>
+                                                {"\n"}
+                                                {`// ...\n`}
+                                                {"<"}<span className='text-black'>Toaster</span>{" richColors  />"}
+                                            </code>
+                                        </pre>
+
                                     </motion.p>
                                 ) : <motion.p
                                     variants={itemVariants}
@@ -65,7 +75,11 @@ const Types = () => {
                                     Oops! Something went wrong
                                 </motion.p>
                             }
-                            <CopyButton text={isActivatedButton.snippet}/>
+                            <CopyButton text={`toast${isActivatedButton.snippet}
+
+// ...
+
+<Toaster richColors  />`}/>
                         </motion.div>
                     }
                 </div>
@@ -74,7 +88,7 @@ const Types = () => {
 
     )
 }
-export default Types;
+export default Others;
 
 const itemVariants = {
     open: {
@@ -97,30 +111,34 @@ const itemVariants = {
 
 const allTypes = [
     {
-        name: 'Default',
-        snippet: `('Event has been created')`,
-
-    },
-    {
-        name: 'Description',
-        snippet: `.message('Event has been created', {
-  description: 'Monday, January 3rd at 6:00pm',
-})`,
-
-    },
-    {
-        name: 'Success',
+        name: 'Rich Colors Success',
         snippet: `.success('Event has been created')`,
+        fill : `#ECFDF3`,
+        pic : <BiCheck/>,
+
     },
     {
-        name: 'Info',
-        snippet: `.info('Be at the area 10 minutes before the event time')`,
-    },
-    {
-        name: 'Warning',
-        snippet: `.warning('Event start time cannot be earlier than 8am')`,
-    },
-    {
-        name: 'Error',
+        name: 'Rich Colors Error',
         snippet: `.error('Event has not been created')`,
+        fill : `#FFF0F0`,
+        pic : <FaExclamationTriangle/>,
+    },
+    {
+        name: 'Rich Colors Info',
+        snippet: `.info('Be at the area 10 minutes before the event time')`,
+        fill : `#F0F8FF`,
+        pic : <FaInfoCircle/>,
+
+    },
+    {
+        name: 'Rich Colors Warning',
+        snippet: `.warning('Event start time cannot be earlier than 8am')`,
+        fill: `#FFFCF0`
+
     },]
+
+
+
+
+
+

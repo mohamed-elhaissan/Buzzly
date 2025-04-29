@@ -7,25 +7,26 @@ export default function Position() {
     const [activatedButton, setActivatedButton] = useState<string>(positions[0]);
     const [isCLickedButton, setIsCLickedButton] = useState<number>(0);
     return (
-        <section className='w-1/3 mt-20'>
+        <section className='w-1/3 mb-4'>
             <div>
                 <h2 className='font-semibold  mb-2'>Position</h2>
 
                 <p>Swipe direction changes depending on the position.</p>
 
-                <div className='mt-6 mb-50  flex items-center  gap-x-3 gap-y-2 flex-wrap w-full'>
+                <div className='mt-4   flex items-center  gap-x-3 gap-y-2 flex-wrap w-full'>
                     {
                         positions.map((position: string, index: number) => (
                             <div key={index}>
                                 <button
                                     style={{
                                         backgroundColor: isCLickedButton === index ? "#F3F3F3" : '#fcfcfc',
+                                        borderColor: isCLickedButton !== index ? "#F3F3F3" : '#dbdbdb',
                                     }}
                                     onClick={() => {
                                         setIsCLickedButton(index)
                                         setActivatedButton(position)
                                     }}
-                                    className='codeText text-sm   hover:bg-[#F3F3F3] transition duration-75 ease-in p-2 px-4 rounded cursor-pointer border border-[#f3f3f3]'
+                                    className='codeText text-sm   hover:bg-[#F3F3F3] transition duration-75 ease-in p-2 px-4 rounded cursor-pointer border '
                                 >
                                     {position}
                                 </button>
