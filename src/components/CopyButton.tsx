@@ -28,7 +28,7 @@ export default function CopyButton({text}: Props) {
         <div>
             {
                 isCopied ? <BiCheck className='text-green-500 rounded'/> :
-                    <svg onClick={copyText} className='cursor-pointer' viewBox="0 0 24 24" width="14"
+                    <svg onClick={copyText} className='cursor-pointer dark:text-white' viewBox="0 0 24 24" width="14"
                          height="14" stroke="currentColor" strokeWidth="1.5"
                          strokeLinecap="round" strokeLinejoin="round" fill="none"
                          shapeRendering="geometricPrecision">

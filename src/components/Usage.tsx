@@ -8,12 +8,12 @@ export default function Usage() {
     return (
         <section className='w-1/3 mb-4 sm:w-[80%] xl:w-1/2 2xl:w-1/3'>
             <div>
-                <h2 className='font-semibold  mb-2'>Usage</h2>
+                <h2 className='font-semibold  mb-2 dark:text-white'>Usage</h2>
 
-                <p>Render the toaster in the root of your app.</p>
+                <p className='dark:text-[#c1c1c6]'>Render the toaster in the root of your app.</p>
 
                 <div
-                    className='bg-[#FCFCFC] border  border-[#e4e4e7] flex justify-between items-center p-2 px-5 rounded'>
+                    className='bg-[#FCFCFC] border dark:bg-[#171716] dark:border-[#2e2e2d] dark:text-white   border-[#e4e4e7] flex justify-between items-center p-2 px-5 rounded'>
                     <div className='text-sm'>
                         <p className='codeBlock'><span
                             className='text-[#D73A49] font-semibold codeBlock'>import</span> {"      { Toaster, Toast }    "}

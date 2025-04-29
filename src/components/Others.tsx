@@ -2,8 +2,8 @@ import {useState} from "react";
 import CopyButton from "./CopyButton.tsx";
 import {motion} from "framer-motion";
 import {BiCheck} from "react-icons/bi";
-import { FaInfoCircle } from 'react-icons/fa';
-import { FaExclamationTriangle } from 'react-icons/fa'; // FontAwesome
+import {FaInfoCircle} from 'react-icons/fa';
+import {FaExclamationTriangle} from 'react-icons/fa'; // FontAwesome
 
 
 interface TypesSnippet {
@@ -19,9 +19,9 @@ const Others = () => {
     return (
         <section className='w-1/3 mb-52 sm:w-[80%] xl:w-1/2 2xl:w-1/3'>
             <div>
-                <h2 className='font-semibold  mb-2'>Others</h2>
+                <h2 className='font-semibold dark:text-white  mb-2'>Others</h2>
 
-                <p>You can use more</p>
+                <p className='dark:text-[#c1c1c6]'>You can use more</p>
 
                 <div className='mt-4   flex items-center gap-3  flex-wrap w-full'>
                     {
@@ -36,7 +36,7 @@ const Others = () => {
                                         backgroundColor: isCLickedButton === index ? item.fill : '#fcfcfc',
                                         borderColor: isCLickedButton !== index ? "#F3F3F3" : '#dbdbdb',
                                     }}
-                                    className='codeText text-sm   hover:bg-[#F3F3F3] transition duration-75 ease-in p-2 px-4 rounded cursor-pointer border border-[#f3f3f3]'
+                                    className='codeText text-sm    hover:bg-[#F3F3F3] transition duration-75 ease-in p-2 px-4 rounded cursor-pointer border border-[#f3f3f3]'
                                 >
                                     {item.name}
                                 </button>
@@ -49,7 +49,7 @@ const Others = () => {
                         <motion.div variants={itemVariants}
                                     initial="closed"
                                     animate="open"
-                                    className='bg-[#FCFCFC] border mt-5 w-full border-[#e4e4e7] flex justify-between items-center py-4 px-5 rounded'>
+                                    className='bg-[#FCFCFC] dark:bg-[#171716] dark:text-white dark:border-[#2e2e2d] border mt-5 w-full border-[#e4e4e7] flex justify-between items-center py-4 px-5 rounded'>
                             {
                                 isActivatedButton.snippet ? (
                                     <motion.span
@@ -59,10 +59,10 @@ const Others = () => {
                                         className='codeBlock text-sm'><span
                                         className="text-[#D73A49]">toast</span>{isActivatedButton.snippet}
                                         <pre>
-                                            <code className='text-[#6f6f6f] codeText'>
+                                            <code className='text-[#6f6f6f ] codeText'>
                                                 {"\n"}
                                                 {`// ...\n`}
-                                                {"<"}<span className='text-black'>Toaster</span>{" richColors  />"}
+                                                {"<"}<span className='text-black dark:text-white'>Toaster</span>{" richColors  />"}
                                             </code>
                                         </pre>
 
@@ -113,21 +113,21 @@ const allTypes = [
     {
         name: 'Rich Colors Success',
         snippet: `.success('Event has been created')`,
-        fill : `#ECFDF3`,
-        pic : <BiCheck/>,
+        fill: `#ECFDF3`,
+        pic: <BiCheck/>,
 
     },
     {
         name: 'Rich Colors Error',
         snippet: `.error('Event has not been created')`,
-        fill : `#FFF0F0`,
-        pic : <FaExclamationTriangle/>,
+        fill: `#FFF0F0`,
+        pic: <FaExclamationTriangle/>,
     },
     {
         name: 'Rich Colors Info',
         snippet: `.info('Be at the area 10 minutes before the event time')`,
-        fill : `#F0F8FF`,
-        pic : <FaInfoCircle/>,
+        fill: `#F0F8FF`,
+        pic: <FaInfoCircle/>,
 
     },
     {

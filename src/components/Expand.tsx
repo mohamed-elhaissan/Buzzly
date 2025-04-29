@@ -10,9 +10,9 @@ export default function () {
     return (
         <section className='w-1/3 sm:w-[80%] xl:w-1/2 2xl:w-1/3 '>
             <div>
-                <h2 className='font-semibold  mb-2'>Expand</h2>
+                <h2 className='font-semibold dark:text-white  mb-2'>Expand</h2>
 
-                <p>You can change the amount of toasts visible through the prop.</p>
+                <p className='dark:text-[#c1c1c6]'>You can change the amount of toasts visible through the prop.</p>
 
                 <div className='mt-4   flex items-center gap-3  flex-wrap w-full'>
                     {
@@ -39,7 +39,7 @@ export default function () {
                         <motion.div variants={itemVariants}
                                     initial="closed"
                                     animate="open"
-                                    className='bg-[#FCFCFC] border mt-5 w-full border-[#e4e4e7] flex justify-between items-center py-4 px-5 rounded'>
+                                    className='bg-[#FCFCFC] dark:bg-[#171716] dark:text-white dark:border-[#2e2e2d] border mt-5 w-full border-[#e4e4e7] flex justify-between items-center py-4 px-5 rounded'>
                             {
                                 actived ? (
                                     <motion.p

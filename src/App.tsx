@@ -3,7 +3,7 @@ import PageRoutes from "./Routes.tsx";
 function App() {
 
   return (
-    <div className='dark'>
+    <div className=''>
       <PageRoutes />
     </div>
   )

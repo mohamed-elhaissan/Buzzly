@@ -5,18 +5,18 @@ export default function Hero() {
 
 
     return (
-        <section className='sm:w-[80%]   lg:w-1/2 xl:w-1/3 2xl:w-1/3 '>
-            <h1 className='text-6xl font-bold text-center '>Buzzly</h1>
-            <p className='text-[#6f6f6f] text-center text-[17px] mt-1 mb-2  text-base'>An
+        <section className='sm:w-[80%]  lg:w-1/2 xl:w-1/3 2xl:w-1/3 '>
+            <h1 className='text-6xl font-bold text-center dark:text-[#F8F8F8] '>Buzzly</h1>
+            <p className='text-[#6f6f6f] text-center text-[17px] mt-1 mb-2  text-base dark:text-[#767676]'>An
                 opinionated toast component for React.</p>
             <div className='flex items-center justify-center gap-5'>
                 <button
-                    className='bg-black cursor-pointer  py-2 px-6 text-white rounded w-1/2 shadow-sm  hover:opacity-75 '>Exemple
+                    className='bg-black cursor-pointer dark:bg-[#181818] dark:border dark:border-[#5c5c5c]   dark:border-none dark:font-semibold  py-2 px-6 text-white rounded w-1/2 shadow-sm  hover:opacity-75 '>Exemple
                 </button>
                 <motion.button className='w-1/2 '
                 >
                     <Link
-                        className='bg-[#FFFFFF] hover:opacity-75 cursor-pointer text-black shadow-sm py-2 px-6 text-center flex items-center justify-center gap-1  rounded w-full '
+                        className='bg-[#FFFFFF] dark:bg-[#9911FF] dark:text-white dark:font-semibold hover:opacity-75 cursor-pointer fontPoppins  dark:text-black  text-black shadow-sm py-2 px-6 text-center flex items-center justify-center gap-1  rounded w-full '
                         to={'https://github.com/mohamed-elhaissan/Buzzly'}
                         target={"_blank"}>
                         Github

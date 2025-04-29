@@ -16,9 +16,9 @@ const Types = () => {
     return (
         <section className='w-1/3 mb-4 sm:w-[80%] xl:w-1/2 2xl:w-1/3'>
             <div>
-                <h2 className='font-semibold  mb-2'>Types</h2>
+                <h2 className='font-semibold  mb-2 dark:text-white'>Types</h2>
 
-                <p>You can customize the type of toast you want to render, and pass an options object as the
+                <p className='dark:text-[#c1c1c6]'>You can customize the type of toast you want to render, and pass an options object as the
                     second argument.</p>
 
                 <div className='mt-4   flex items-center gap-3  flex-wrap w-full'>
@@ -34,7 +34,7 @@ const Types = () => {
                                         backgroundColor: isCLickedButton === index ? "#F3F3F3" : '#fcfcfc',
                                         borderColor: isCLickedButton !== index ? "#F3F3F3" : '#dbdbdb',
                                     }}
-                                    className='codeText text-sm   hover:bg-[#F3F3F3] transition duration-75 ease-in p-2 px-4 rounded cursor-pointer border border-[#f3f3f3]'
+                                    className='codeText text-sm dark:bg-[#5c5c5c]    hover:bg-[#F3F3F3] transition duration-75 ease-in p-2 px-4 rounded cursor-pointer border border-[#f3f3f3]'
                                 >
                                     {type.name}
                                 </button>
@@ -47,7 +47,7 @@ const Types = () => {
                         <motion.div variants={itemVariants}
                                     initial="closed"
                                     animate="open"
-                                    className='bg-[#FCFCFC] border mt-5 w-full border-[#e4e4e7] flex justify-between items-center py-4 px-5 rounded'>
+                                    className='bg-[#FCFCFC] dark:bg-[#171716] dark:text-white  dark:border-[#2e2e2d] border mt-5 w-full border-[#e4e4e7] flex justify-between items-center py-4 px-5 rounded'>
                             {
                                 isActivatedButton.snippet ? (
                                     <motion.p

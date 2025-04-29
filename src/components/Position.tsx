@@ -9,9 +9,9 @@ export default function Position() {
     return (
         <section className='w-1/3 mb-4 sm:w-[80%] xl:w-1/2 2xl:w-1/3'>
             <div>
-                <h2 className='font-semibold  mb-2'>Position</h2>
+                <h2 className='font-semibold  dark:text-white mb-2'>Position</h2>
 
-                <p>Swipe direction changes depending on the position.</p>
+                <p className='dark:text-[#c1c1c6]'>Swipe direction changes depending on the position.</p>
 
                 <div className='mt-4   flex items-center  gap-x-3 gap-y-2 flex-wrap w-full'>
                     {
@@ -39,7 +39,7 @@ export default function Position() {
                         <motion.div variants={itemVariants}
                                     initial="closed"
                                     animate="open"
-                                    className='bg-[#FCFCFC] border mt-5 w-full border-[#e4e4e7] flex justify-between items-center py-4 px-5 rounded'>
+                                    className='bg-[#FCFCFC] dark:bg-[#171716] dark:text-white dark:border-[#2e2e2d] border mt-5 w-full border-[#e4e4e7] flex justify-between items-center py-4 px-5 rounded'>
                             {
                                 activatedButton ? (
                                     <motion.p

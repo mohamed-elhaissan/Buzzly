@@ -9,6 +9,7 @@ import Others from "./Others.tsx";
 import Footer from "./Footer.tsx";
 import {useEffect, useState} from "react";
 import Loading from "./Loading.tsx";
+import DarkMode from "./DarkMode.tsx";
 
 const Home = () => {
     const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -16,8 +17,6 @@ const Home = () => {
 
 
     useEffect(() => {
-
-        //check if the page is full loaded
         if (document.readyState === "complete") {
             setIsLoading(false);
         } else {
@@ -25,7 +24,6 @@ const Home = () => {
                 setIsLoading(false);
             });
         }
-
         return () => window.removeEventListener("load", () => {
             setIsLoading(false);
         });
@@ -33,14 +31,22 @@ const Home = () => {
 
 
     return (
-        <>
+        <div className=' '>
             {isLoading ? (<Loading/>) : (
                 <div className='flex items-center justify-start   flex-col   h-screen selection:bg-[#DBDBDB]'>
-                    <motion.div className='fixed top-0 left-0 right-0 h-[10px] origin-bottom rounded-full bg-[#ff0088]'
-                                style={{
-                                    scaleX: scrollYProgress,
-
-                                }}
+                    <DarkMode/>
+                    <motion.div
+                        id="scroll-indicator"
+                        style={{
+                            scaleX: scrollYProgress,
+                            position: "fixed",
+                            top: 0,
+                            left: 0,
+                            right: 0,
+                            height: 10,
+                            originX: 0,
+                            backgroundColor: "#0C66F4",
+                        }}
                     />
                     <div className='w-full flex flex-col items-center justify-center mt-52 gap-[56px] '>
                         <Hero/>
@@ -54,7 +60,7 @@ const Home = () => {
                     </div>
                 </div>
             )}
-        </>
+        </div>
     )
 }
 export default Home;
