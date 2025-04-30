@@ -1,8 +1,10 @@
 import {Link} from "react-router-dom";
 import {motion} from "framer-motion";
+import {useBuzzly} from "../Toast/useBuzzly.ts";
 
 export default function Hero() {
-
+    // const useBuzzly = useBuzzly();
+    console.log(useBuzzly());
 
     return (
         <section className='sm:w-[80%]  lg:w-1/2 xl:w-1/3 2xl:w-1/3 '>
@@ -16,7 +18,7 @@ export default function Hero() {
                 <motion.button className='w-1/2 '
                 >
                     <Link
-                        className='bg-[#FFFFFF] dark:bg-[#9911FF] dark:text-white dark:font-semibold hover:opacity-75 cursor-pointer fontPoppins  dark:text-black  text-black shadow-sm py-2 px-6 text-center flex items-center justify-center gap-1  rounded w-full '
+                        className='githubButton dark:bg-[#9911FF] dark:text-white dark:font-semibold hover:opacity-75 cursor-pointer fontPoppins  dark:text-black  text-black shadow-sm py-2 px-6 text-center flex items-center justify-center gap-1  rounded w-full '
                         to={'https://github.com/mohamed-elhaissan/Buzzly'}
                         target={"_blank"}>
                         Github

@@ -43,4 +43,3 @@ body {
 .footerGradient {
     background-image: linear-gradient(to bottom, var(--bg-light), transparent), linear-gradient(to bottom, var(--bg-light), transparent), linear-gradient(to bottom, var(--bg-light), transparent);
 }
-

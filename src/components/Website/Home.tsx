@@ -1,4 +1,4 @@
-import {useScroll, motion} from "framer-motion";
+
 import Types from "./Types.tsx";
 import Installation from "./Installation.tsx";
 import Usage from "./Usage.tsx";
@@ -13,7 +13,6 @@ import DarkMode from "./DarkMode.tsx";
 
 const Home = () => {
     const [isLoading, setIsLoading] = useState<boolean>(true);
-    const {scrollYProgress} = useScroll();
 
 
     useEffect(() => {
@@ -35,19 +34,7 @@ const Home = () => {
             {isLoading ? (<Loading/>) : (
                 <div className='flex items-center justify-start   flex-col   h-screen selection:bg-[#DBDBDB]'>
                     <DarkMode/>
-                    <motion.div
-                        id="scroll-indicator"
-                        style={{
-                            scaleX: scrollYProgress,
-                            position: "fixed",
-                            top: 0,
-                            left: 0,
-                            right: 0,
-                            height: 10,
-                            originX: 0,
-                            backgroundColor: "#0C66F4",
-                        }}
-                    />
+
                     <div className='w-full flex flex-col items-center justify-center mt-52 gap-[56px] '>
                         <Hero/>
                         <Installation/>
