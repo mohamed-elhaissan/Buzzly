@@ -37,6 +37,9 @@ export default function Position() {
                     }
                     {
                         <motion.div variants={itemVariants}
+                                    style={{
+                                        background: 'linear-gradient(to top, #f8f8f8, #fcfcfc 8px)'
+                                    }}
                                     initial="closed"
                                     animate="open"
                                     className='bg-[#FCFCFC] dark:bg-[#171716] dark:text-white dark:border-[#2e2e2d] border mt-5 w-full border-[#e4e4e7] flex justify-between items-center py-4 px-5 rounded'>

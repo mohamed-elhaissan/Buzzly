@@ -1,4 +1,3 @@
-
 import Types from "./Types.tsx";
 import Installation from "./Installation.tsx";
 import Usage from "./Usage.tsx";
@@ -10,6 +9,8 @@ import Footer from "./Footer.tsx";
 import {useEffect, useState} from "react";
 import Loading from "./Loading.tsx";
 import DarkMode from "./DarkMode.tsx";
+
+
 
 const Home = () => {
     const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -36,6 +37,8 @@ const Home = () => {
                     <DarkMode/>
 
                     <div className='w-full flex flex-col items-center justify-center mt-52 gap-[56px] '>
+
+
                         <Hero/>
                         <Installation/>
                         <Usage/>

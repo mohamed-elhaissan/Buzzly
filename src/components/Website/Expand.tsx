@@ -26,6 +26,7 @@ export default function () {
                                         backgroundColor: actived === item ? "#F3F3F3" : '#fcfcfc',
                                         borderColor: actived !== item ? "#F3F3F3" : '#dbdbdb',
                                     }}
+
                                     className='codeText text-sm   hover:bg-[#F3F3F3] transition duration-75 ease-in p-2 px-4 rounded cursor-pointer border border-[#dbdbdb]'
                                 >
                                     {item}
@@ -36,7 +37,11 @@ export default function () {
 
                     }
                     {
-                        <motion.div variants={itemVariants}
+                        <motion.div
+                            style={{
+                                background: 'linear-gradient(to top, #f8f8f8, #fcfcfc 8px)'
+                            }}
+                            variants={itemVariants}
                                     initial="closed"
                                     animate="open"
                                     className='bg-[#FCFCFC] dark:bg-[#171716] dark:text-white dark:border-[#2e2e2d] border mt-5 w-full border-[#e4e4e7] flex justify-between items-center py-4 px-5 rounded'>
