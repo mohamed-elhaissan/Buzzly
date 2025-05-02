@@ -27,11 +27,12 @@
 }
 
 body[data-theme=light] {
-
+    --codeBackground: #FCFCFC ;
     --bg-light: #fff;
 }
 
 body[data-theme=dark] {
+    --codeBackground: #171716 ;
     --bg-light: #0B0B0B;
     background-color: var(--bg-light);
 }

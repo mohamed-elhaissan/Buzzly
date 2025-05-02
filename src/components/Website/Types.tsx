@@ -34,7 +34,7 @@ const Types = () => {
                                         backgroundColor: isCLickedButton === index ? "#F3F3F3" : '#fcfcfc',
                                         borderColor: isCLickedButton !== index ? "#F3F3F3" : '#dbdbdb',
                                     }}
-                                    className='codeText text-sm dark:bg-[#5c5c5c]    hover:bg-[#F3F3F3] transition duration-75 ease-in p-2 px-4 rounded cursor-pointer border border-[#f3f3f3]'
+                                    className='codeText text-sm dark:text-black    hover:bg-[#F3F3F3] transition duration-75 ease-in p-2 px-4 rounded cursor-pointer border border-[#f3f3f3]'
                                 >
                                     {type.name}
                                 </button>
@@ -50,7 +50,7 @@ const Types = () => {
                                     }}
                                     initial="closed"
                                     animate="open"
-                                    className='bg-[#FCFCFC] dark:bg-[#171716] dark:text-white  dark:border-[#2e2e2d] border mt-5 w-full border-[#e4e4e7] flex justify-between items-center py-4 px-5 rounded'>
+                                    className='bg-[var(--codeBackground)] dark:bg-[#171716]   dark:border-[#2e2e2d] border mt-5 w-full border-[#e4e4e7] flex justify-between items-center py-4 px-5 rounded'>
                             {
                                 isActivatedButton.snippet ? (
                                     <motion.p

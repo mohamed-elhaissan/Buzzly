@@ -10,8 +10,6 @@ import {useEffect, useState} from "react";
 import Loading from "./Loading.tsx";
 import DarkMode from "./DarkMode.tsx";
 
-
-
 const Home = () => {
     const [isLoading, setIsLoading] = useState<boolean>(true);
 
@@ -35,6 +33,7 @@ const Home = () => {
             {isLoading ? (<Loading/>) : (
                 <div className='flex items-center justify-start   flex-col   h-screen selection:bg-[#DBDBDB]'>
                     <DarkMode/>
+
 
                     <div className='w-full flex flex-col items-center justify-center mt-52 gap-[56px] '>
 
