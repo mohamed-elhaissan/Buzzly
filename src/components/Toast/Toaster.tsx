@@ -13,6 +13,8 @@ export  function Toaster() {
   useEffect(
     () => {
       const unsubscribe = toast._subscribe((newToast) => {
+        console.log(newToast);
+        
         setToasts((prev) => [...prev, newToast]);
         setTimeout(() => {
             setToasts(prev => prev.filter(t => t.id !== newToast.id))
@@ -23,10 +25,10 @@ export  function Toaster() {
     },[])
 
   return createPortal(
-   <div className="fixed top-4 right-4 z-[9999] space-y-3">
+   <div className="fixed bottom-4 right-10 z-[9999] space-y-3 w-1/6">
     <AnimatePresence> {
-        toasts?.map((toast) =>(
-            <Toast key={toast.id} message={`test${toast.id}`} />
+        toasts?.map((toast) =>( 
+            <Toast key={toast.id} type={toast.type} message={toast.message}  />
         ))
     }</AnimatePresence>
        </div>,

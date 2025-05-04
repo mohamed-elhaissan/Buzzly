@@ -61,27 +61,14 @@ const framerToastVaraints ={
     hidden: {
       opacity: 0,
       y: 50,
-      scale: 0.95,
     },
     opened: {
       opacity: 1,
       y: 0,
-      scale: 1,
-      transition: {
-        type: "spring",
-        stiffness: 300,
-        damping: 20,
-        mass: 0.6,
-      },
     },
     exit: {
       opacity: 0,
-      y: 50,
-      scale: 0.95,
-      transition: {
-        duration: 0.2,
-        ease: "easeInOut",
-      },
+      y: -50,
     },
   };
 

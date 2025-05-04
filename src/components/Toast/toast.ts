@@ -27,6 +27,9 @@ class ToastManager {
   info(message: string) {
     this.emit({ type: "info", message  });
   }
+  normal(message: string) {
+    this.emit({ type: "normal", message  });
+  }
 
   _subscribe(listener: ToastListener) {
     this.listnner.add(listener);
