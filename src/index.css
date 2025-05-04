@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+/* @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *)); */
 @font-face {
     font-family: 'Thicccboi';
     src: url('./font/THICCCBOI-Medium.ttf') format('truetype');
@@ -26,7 +26,7 @@
 
 }
 
-body[data-theme=light] {
+/* body[data-theme=light] {
     --codeBackground: #FCFCFC ;
     --bg-light: #fff;
 }
@@ -35,7 +35,7 @@ body[data-theme=dark] {
     --codeBackground: #171716 ;
     --bg-light: #0B0B0B;
     background-color: var(--bg-light);
-}
+} */
 
 body {
     font-family: 'Thicccboi';
@@ -45,3 +45,8 @@ body {
 .footerGradient {
     background-image: linear-gradient(to bottom, var(--bg-light), transparent), linear-gradient(to bottom, var(--bg-light), transparent), linear-gradient(to bottom, var(--bg-light), transparent);
 }
+.toast {
+    box-shadow:
+      0 2px 4px rgba(0, 0, 0, 0.05),
+      0 4px 12px rgba(0, 0, 0, 0.1);
+  }

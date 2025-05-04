@@ -11,6 +11,11 @@ import Loading from "./Loading.tsx";
 import DarkMode from "./DarkMode.tsx";
 import Scroll from "./Scroll.tsx";
 
+
+import {toast,Toaster} from "../Toast/index.ts";
+
+
+
 const Home = () => {
     const [isLoading, setIsLoading] = useState<boolean>(true);
 
@@ -34,9 +39,9 @@ const Home = () => {
             {isLoading ? (<Loading/>) : (
                 <div className='flex items-center justify-start   flex-col   h-screen selection:bg-[#DBDBDB]'>
                     <Scroll/>
+                    <button onClick={()=>toast.success("test here")}> click</button>
                     <DarkMode/>
-
-
+                    <Toaster/>
                     <div className='w-full flex flex-col items-center justify-center mt-52 gap-[56px] '>
 
 

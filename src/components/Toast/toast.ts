@@ -15,17 +15,17 @@ class ToastManager {
   }
 
   //methodes
-  success(message: string, duration = 3000) {
-    this.emit({ type: "success", message, duration });
+  success(message: string) {
+    this.emit({ type: "success", message  });
   }
-  error(message: string, duration = 3000) {
-    this.emit({ type: "error", message, duration });
+  error(message: string) {
+    this.emit({ type: "error", message  });
   }
-  warning(message: string, duration = 3000) {
-    this.emit({ type: "warning", message, duration });
+  warning(message: string) {
+    this.emit({ type: "warning", message  });
   }
-  info(message: string, duration = 3000) {
-    this.emit({ type: "info", message, duration });
+  info(message: string) {
+    this.emit({ type: "info", message  });
   }
 
   _subscribe(listener: ToastListener) {
