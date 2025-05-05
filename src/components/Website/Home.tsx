@@ -56,6 +56,13 @@ const Home = () => {
           </button>
           <button
             className="px-6 py-2 text-white bg-blue-500 rounded-lg font-semibold shadow-md transition duration-300 ease-in-out transform hover:bg-blue-600 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 active:bg-blue-700"
+            onClick={() => toast.normal("test here")}
+          >
+            {" "}
+            normal
+          </button>
+          <button
+            className="px-6 py-2 text-white bg-blue-500 rounded-lg font-semibold shadow-md transition duration-300 ease-in-out transform hover:bg-blue-600 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 active:bg-blue-700"
             onClick={() => toast.warning("test here")}
           >
             {" "}

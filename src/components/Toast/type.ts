@@ -8,7 +8,9 @@ export type ToastPosition = 'top-left' | 'top-right' | 'bottom-left' | 'bottom-r
 export interface ToastProps {
     message?: string;
     id?: string;
-    type: ToastTypes;
+    richColor?:boolean | false;
+    theme?: ToastTheme;
+    type: ToastTypes | "normal" ;
     position?: ToastPosition;
     description?: string;
     icon?: string;

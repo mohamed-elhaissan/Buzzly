@@ -28,7 +28,7 @@ export  function Toaster() {
    <div className="fixed bottom-4 right-10 z-[9999]   space-y-3 w-1/6">
     <AnimatePresence initial={false} > {
         toasts?.map((toast) =>( 
-              <Toast key={toast.id} type={toast.type} vk={toasts.length}  message={toast.message}  />
+              <Toast key={toast.id} type={toast.type}    message={toast.message}  />
          
         ))
     }</AnimatePresence>
