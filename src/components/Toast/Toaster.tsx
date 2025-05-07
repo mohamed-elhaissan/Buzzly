@@ -15,18 +15,22 @@ export function Toaster() {
       setToasts((prev) => [...prev, newToast]);
       setTimeout(() => {
         setToasts((prev) => prev.filter((t) => t.id !== newToast.id));
+        console.log(toasts);
+        
       }, 3000);
     });
 
     return unsubscribe;
-  }, []);
+  }, [toasts]);
 
   return createPortal(
-    <div >
-      <AnimatePresence initial={false}>
+    <div className="fixed right-[2%] bottom-[2%] w-1/5">
+      <AnimatePresence >
         {" "}
-        {toasts?.map((toast,index) => (
-          <Toast key={toast.id} offset={index*20} type={toast.type}  message={toast.message} />
+        {toasts?.map((toast, index) => (
+          <div key={index} >
+            <Toast type={toast.type} offset={index} message={toast.message} />
+          </div>
         ))}
       </AnimatePresence>
     </div>,

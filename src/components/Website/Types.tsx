@@ -2,6 +2,7 @@ import {useState} from "react";
 import CopyButton from "./CopyButton.tsx";
 import {motion} from "framer-motion";
 
+import {toast} from "../Toast/index.ts";
 
 interface TypesSnippet {
     name: string,
@@ -101,14 +102,7 @@ const itemVariants = {
 const allTypes = [
     {
         name: 'Default',
-        snippet: `('Event has been created')`,
-
-    },
-    {
-        name: 'Description',
-        snippet: `.message('Event has been created', {
-  description: 'Monday, January 3rd at 6:00pm',
-})`,
+        snippet: `.normal('Event has been created')`,
 
     },
     {
