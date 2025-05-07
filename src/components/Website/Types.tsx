@@ -24,12 +24,13 @@ const Types = () => {
 
                 <div className='mt-4   flex items-center gap-3  flex-wrap w-full'>
                     {
-                        allTypes.map((type: any, index: number) => (
+                        allTypes.map((type, index) => (
                             <div key={index}>
                                 <button
                                     onClick={() => {
                                         setIsCLickedButton(index)
                                         setIsActivatedButton(type)
+                                        type.action()
                                     }}
                                     style={{
                                         backgroundColor: isCLickedButton === index ? "#F3F3F3" : '#fcfcfc',
@@ -103,21 +104,26 @@ const allTypes = [
     {
         name: 'Default',
         snippet: `.normal('Event has been created')`,
+        action : ()=>{toast.normal('Event has been created')}
 
     },
     {
         name: 'Success',
         snippet: `.success('Event has been created')`,
+        action : ()=>{toast.success('Event has been created')}
     },
     {
         name: 'Info',
         snippet: `.info('Be at the area 10 minutes before the event time')`,
+        action : ()=>{toast.info('Be at the area 10 minutes before the event time')}
     },
     {
         name: 'Warning',
         snippet: `.warning('Event start time cannot be earlier than 8am')`,
+        action : ()=>{toast.warning('Event start time cannot be earlier than 8am')}
     },
     {
         name: 'Error',
         snippet: `.error('Event has not been created')`,
+        action : ()=>{toast.error('Event has not been created')}
     },]

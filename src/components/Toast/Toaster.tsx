@@ -7,6 +7,11 @@ import { toast } from "./toast.ts";
 
 export function Toaster() {
   const [toasts, setToasts] = useState<ToastProps[]>([]);
+  const [toastPosition, setToastPosition] = useState<string>(
+    "right-[2%] bottom-[2%]"
+  );
+  console.log(toastPosition );
+  
 
   useEffect(() => {
     const unsubscribe = toast._subscribe((newToast) => {
@@ -16,7 +21,6 @@ export function Toaster() {
       setTimeout(() => {
         setToasts((prev) => prev.filter((t) => t.id !== newToast.id));
         console.log(toasts);
-        
       }, 3000);
     });
 
@@ -24,12 +28,12 @@ export function Toaster() {
   }, [toasts]);
 
   return createPortal(
-    <div className="fixed right-[2%] bottom-[2%] w-1/5">
-      <AnimatePresence >
+    <div className={`fixed ${toastPosition}  flex flex-col gap-2`}>
+      <AnimatePresence>
         {" "}
         {toasts?.map((toast, index) => (
-          <div key={index} >
-            <Toast type={toast.type} offset={index} message={toast.message} />
+          <div key={index}>
+            <Toast type={toast.type} passPositionValue={setToastPosition} message={toast.message} />
           </div>
         ))}
       </AnimatePresence>

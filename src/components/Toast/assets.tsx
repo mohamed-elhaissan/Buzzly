@@ -14,23 +14,44 @@ const getType = (iconType: ToastTypes) => {
       return null;
   }
 };
-const getBackgroundColor = ({ type, richColor  }:{type : string,richColor:boolean}) => {
-    if (richColor) {
-        switch (type) {
-            case "success":
-                return "bg-green-100 border text-green-900 border-green-400";
-            case "warning":
-                return "bg-yellow-100 border text-yellow-900 border-yellow-400";
-            case "error":
-                return "bg-red-100 border text-red-900 border-red-400";
-            case "info":
-                return "bg-blue-100 border text-blue-900 border-blue-400";
-            default:
-                return "bg-gray-500";
-        }
+const getBackgroundColor = ({
+  type,
+  richColor,
+}: {
+  type: string;
+  richColor: boolean;
+}) => {
+  if (richColor) {
+    switch (type) {
+      case "success":
+        return "bg-green-100 border text-green-900 border-green-400";
+      case "warning":
+        return "bg-yellow-100 border text-yellow-900 border-yellow-400";
+      case "error":
+        return "bg-red-100 border text-red-900 border-red-400";
+      case "info":
+        return "bg-blue-100 border text-blue-900 border-blue-400";
+      default:
+        return "bg-gray-500";
     }
-    return "bg-white";
-  };
+  }
+  return "bg-white";
+};
+
+const getPosition = (position: string) => {
+  switch (position) {
+    case "top-left":
+      return "top-0 left-0";
+    case "top-right":
+      return "top-0 right-0";
+    case "bottom-left":
+      return "bottom-0 left-0";
+    case "bottom-right":
+      return "bottom-0 right-0";
+    default:
+      return "bottom-0 right-0";
+  }
+};
 
 const successIcon = (
   <svg
@@ -111,5 +132,6 @@ const framerToastVaraints = {
 };
 
 export const itemsVariants = framerToastVaraints;
-export  {getType};
-export {getBackgroundColor};
+export { getType };
+export { getBackgroundColor };
+export { getPosition };

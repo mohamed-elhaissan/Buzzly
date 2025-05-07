@@ -17,7 +17,7 @@ const Others = () => {
 
 
     return (
-        <section className='w-1/3 mb-52 sm:w-[80%] xl:w-1/2 2xl:w-1/3'>
+        <section className='w-1/3  sm:w-[80%] xl:w-1/2 2xl:w-1/3'>
             <div>
                 <h2 className='font-semibold dark:text-white  mb-2'>Others</h2>
 
@@ -25,7 +25,7 @@ const Others = () => {
 
                 <div className='mt-4   flex items-center gap-3  flex-wrap w-full'>
                     {
-                        allTypes.map((item: any, index: number) => (
+                        allTypes.map((item, index) => (
                             <div key={index}>
                                 <button
                                     onClick={() => {

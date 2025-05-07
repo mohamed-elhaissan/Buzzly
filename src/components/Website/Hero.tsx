@@ -22,7 +22,7 @@ export default function Hero() {
                         style={{
                             background: 'linear-gradient(to top, #f8f8f8, #fcfcfc 8px)'
                         }}
-                        className='githubButton dark:bg-[#9911FF] dark:text-white dark:font-semibold hover:opacity-75 cursor-pointer fontPoppins  dark:text-black  text-black shadow-sm py-2 px-6 text-center flex items-center justify-center gap-1  rounded w-full '
+                        className='githubButton dark:bg-[#9911FF]  dark:font-semibold hover:opacity-75 cursor-pointer fontPoppins   text-black shadow-sm py-2 px-6 text-center flex items-center justify-center gap-1  rounded w-full '
                         to={'https://github.com/mohamed-elhaissan/Buzzly'}
                         target={"_blank"}>
                         Github

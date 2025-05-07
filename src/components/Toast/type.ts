@@ -14,5 +14,5 @@ export interface ToastProps {
     position?: ToastPosition;
     description?: string;
     icon?: string;
-    offset?: number;
+    passPositionValue?: (position: string) => void;
 }
