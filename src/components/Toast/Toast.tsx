@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ToastProps } from "./type";
-import { getBackgroundColor, getPosition, getType } from "./assets";
+import { getBackgroundColor,  getType } from "./assets";
 
 
 export default function Toast({
@@ -11,7 +11,8 @@ export default function Toast({
 }: ToastProps ) {
   const icon = getType(type);
   const toatBackgroundColor = getBackgroundColor({ type, richColor });
-  const toastPosition = getPosition(position);
+  console.log(position);
+  
   return (
     <motion.div
     layout
@@ -24,7 +25,7 @@ export default function Toast({
         bounce: 0.4,
         staggerChildren: 0.1,
       }}
-      className={`w-full m-3 p-4 flex gap-3 items-center justify-start toast text-sm rounded-md ${toatBackgroundColor} shadow-md`}
+      className={`w-full  p-4 flex gap-3 items-center justify-start toast text-sm rounded-md ${toatBackgroundColor} shadow-md`}
     >
       {icon}
       <span>{message}</span>

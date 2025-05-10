@@ -7,10 +7,7 @@ import { toast } from "./toast.ts";
 
 export function Toaster() {
   const [toasts, setToasts] = useState<ToastProps[]>([]);
-  const [toastPosition, setToastPosition] = useState<string>(
-    "right-[2%] bottom-[2%]"
-  );
-  console.log(toastPosition );
+    
   
 
   useEffect(() => {
@@ -28,12 +25,12 @@ export function Toaster() {
   }, [toasts]);
 
   return createPortal(
-    <div className={`fixed ${toastPosition}  flex flex-col gap-2`}>
+    <div className={`fixed right-[2%] bottom-[2%] w-1/5 flex flex-col gap-2`}>
       <AnimatePresence>
         {" "}
         {toasts?.map((toast, index) => (
           <div key={index}>
-            <Toast type={toast.type} passPositionValue={setToastPosition} message={toast.message} />
+            <Toast type={toast.type} richColor message={toast.message} />
           </div>
         ))}
       </AnimatePresence>

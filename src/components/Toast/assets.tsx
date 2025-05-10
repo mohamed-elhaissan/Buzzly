@@ -24,13 +24,13 @@ const getBackgroundColor = ({
   if (richColor) {
     switch (type) {
       case "success":
-        return "bg-green-100 border text-green-900 border-green-400";
+        return "bg-green-100 border text-green-500 border-green-100";
       case "warning":
-        return "bg-yellow-100 border text-yellow-900 border-yellow-400";
+        return "bg-white border text-yellow-500 border-yellow-100";
       case "error":
-        return "bg-red-100 border text-red-900 border-red-400";
+        return "bg-red-100 border text-red-500 border-red-100";
       case "info":
-        return "bg-blue-100 border text-blue-900 border-blue-400";
+        return "bg-blue-100 border text-blue-500 border-blue-100";
       default:
         return "bg-gray-500";
     }
