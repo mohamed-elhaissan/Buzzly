@@ -23,26 +23,30 @@ export function Toaster({
   richColor = false,
 }: CustomProps) {
   const [toasts, setToasts] = useState<ToastProps[]>([]);
+  const {initial,animate,exit} = getToastAnimation(position);
   const positionValue = getPosition(position);
-
+  
   useEffect(() => {
     const unsubscribe = toast._subscribe((newToast) => {
       setToasts((prev) => [...prev, newToast]);
       setTimeout(() => {
         setToasts((prev) => prev.filter((t) => t.id !== newToast.id));
       }, 3000);
+      
     });
 
     return unsubscribe;
   }, []);
 
   return createPortal(
-    <div className={`fixed ${positionValue} w-1/5 flex flex-col gap-2 m-4`}>
+    <div className={`fixed ${positionValue} w-1/5  sm:w-1/3  xl:w-1/5 2xl:w-1/6 flex flex-col gap-2  m-4`}>
       <AnimatePresence>
         {toasts?.map((toast) => (
-          <div key={toast.id}>
+          <div key={toast.id} >
             <Toast
-              toastAnimation={getToastAnimation(position)}
+              initial={initial}
+              animate={animate}
+              exit={exit}
               type={toast.type}
               richColor={richColor}
               message={toast.message}

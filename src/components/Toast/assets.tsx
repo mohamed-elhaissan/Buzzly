@@ -63,43 +63,43 @@ const getToastAnimation = (toastPosition:string)=>{
       return {
         initial: { opacity: 0, y: 50 },
         animate: { opacity: 1, y: 0 },
-        exit: { opacity: 0, y: -50 },
+        exit: { opacity: 0, y: 50 },
       }
     case "bottom-right" :
       return {
         initial: { opacity: 0, y: 50 },
         animate: { opacity: 1, y: 0 },
-        exit: { opacity: 0, y: -50 },
+      exit: { opacity: 0, y: 50 },
       }   
     case "top-left" :
       return {
         initial: { opacity: 0, y: -50 },
         animate: { opacity: 1, y: 0 },
-        exit: { opacity: 0, y: 50 },
+        exit: { opacity: 0, y: -50 },
       }
     case "top-right" :
       return {
         initial: { opacity: 0, y: -50 },
         animate: { opacity: 1, y: 0 },
-        exit: { opacity: 0, y: 50 },
+        exit: { opacity: 0, y: -50 },
       }
     case "top-center" :
       return {
         initial: { opacity: 0, y: -50 },
         animate: { opacity: 1, y: 0 },
-        exit: { opacity: 0, y: 50 },
+        exit: { opacity: 0, y: -50 },
       }
     case "bottom-center" :
       return {
         initial: { opacity: 0, y: 50 },
         animate: { opacity: 1, y: 0 },
-        exit: { opacity: 0, y: -50 },
+        exit: { opacity: 0, y: 50 },
       }
     default:
       return {
         initial: { opacity: 0, y: 50 },
         animate: { opacity: 1, y: 0 },
-        exit: { opacity: 0, y: -50 },
+        exit: { opacity: 0, y: 50 },
       }
   }
 }

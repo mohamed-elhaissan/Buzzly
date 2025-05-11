@@ -39,7 +39,7 @@ const Home = () => {
           toast.success("This is a success message")
         }}>test</button>
           <DarkMode />
-          <Toaster richColor  position="top-right"/>
+          <Toaster richColor />
           <div className="w-full flex flex-col items-center justify-center mt-52 gap-[56px] ">
             <Hero />
             <Installation />
