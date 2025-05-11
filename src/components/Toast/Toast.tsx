@@ -8,6 +8,7 @@ export default function Toast({
   message,
   richColor = false,
   position = "bottom-right",
+  toastAnimation,
 }: ToastProps ) {
   const icon = getType(type);
   const toatBackgroundColor = getBackgroundColor({ type, richColor });

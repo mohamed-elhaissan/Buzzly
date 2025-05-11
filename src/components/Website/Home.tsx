@@ -9,8 +9,7 @@ import { useEffect, useState } from "react";
 import Loading from "./Loading.tsx";
 import DarkMode from "./DarkMode.tsx";
 import Scroll from "./Scroll.tsx";
-
-import {  Toaster } from "../Toast/index.ts";
+import { Toaster,toast } from "../Toast/index.ts";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -36,9 +35,11 @@ const Home = () => {
       ) : (
         <div className="flex items-center justify-start   flex-col   h-screen selection:bg-[#DBDBDB]">
           <Scroll />
-
+        <button onClick={()=>{
+          toast.success("This is a success message")
+        }}>test</button>
           <DarkMode />
-          <Toaster />
+          <Toaster richColor  position="top-right"/>
           <div className="w-full flex flex-col items-center justify-center mt-52 gap-[56px] ">
             <Hero />
             <Installation />
