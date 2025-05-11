@@ -2,15 +2,19 @@ import { motion } from "framer-motion";
 import CopyButton from "./CopyButton.tsx";
 import { useState } from "react";
 
-export default function Position() {
+export default function Position({
+  setPositionValue
+} : {
+  setPositionValue : (value:string) => void
+}) {
   const [activatedButton, setActivatedButton] = useState<string>(positions[0]);
   const [isCLickedButton, setIsCLickedButton] = useState<number>(0);
   return (
     <section className="w-1/3 mb-4 sm:w-[80%] xl:w-1/2 2xl:w-1/3">
       <div>
-        <h2 className="font-semibold  dark:text-white mb-2">Position</h2>
+        <h2 className="font-semibold  text-white mb-2">Position</h2>
 
-        <p className="dark:text-[#c1c1c6]">
+        <p className="text-[#c1c1c6]">
           Swipe direction changes depending on the position.
         </p>
 
@@ -18,6 +22,7 @@ export default function Position() {
           {positions.map((position: string, index: number) => (
             <div key={index}>
               <button
+              
                 style={{
                   background:
                     isCLickedButton === index
@@ -26,6 +31,7 @@ export default function Position() {
                   color: isCLickedButton === index ? "black" : "#fff",
                 }}
                 onClick={() => {
+                  setPositionValue(position)
                   setIsCLickedButton(index);
                   setActivatedButton(position);
                 }}
@@ -48,12 +54,15 @@ export default function Position() {
                   variants={itemVariants}
                   initial="closed"
                   animate="open"
-                  className="codeBlock text-black text-sm"
+                  className="codeBlock text-white text-sm"
                 >
                   {"<"}
-                  <span className="text-[#D73A49]">Toaster</span> position=
+                  <span className="text-[#ffcc66]">Toaster </span> 
+                  <span className="text-[#77dddd]">
+                    position=
+                    </span>
                   {`{"`}
-                  <span className="text-[#6f6f6f]">{activatedButton}</span>
+                  <span className="text-[#C3E88D]">{activatedButton}</span>
                   {`"} />`}
                 </motion.p>
               ) : (

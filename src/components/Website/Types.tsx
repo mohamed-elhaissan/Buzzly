@@ -66,7 +66,7 @@ const Types = () => {
                   <span className="text-[#77dddd]">toast</span>
                   <span className="text-[#F07178]">
 
-                  .{isActivatedButton.tag}
+                .{isActivatedButton.tag}
                   </span>
                   <span className="text-[#C3E88D]">
 

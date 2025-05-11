@@ -9,8 +9,7 @@ export default function Hero() {
         <section className='sm:w-[80%]  lg:w-1/2 xl:w-1/3 2xl:w-1/3 '>
 
             <h1 className='text-6xl font-bold text-center dark:text-[#F8F8F8] '>Buzzly</h1>
-            <p className='text-[#6f6f6f] text-center text-[17px] mt-1 mb-2  text-base dark:text-[#767676]'>An
-                opinionated toast component for React.</p>
+            <p className='text-[#6f6f6f] text-center text-[17px] mt-1 mb-2  text-base dark:text-[#767676]'>A simple yet powerful toast component for your React apps.</p>
             <div className='flex items-center justify-center gap-5'>
                 <button
 
@@ -33,7 +32,7 @@ export default function Hero() {
             <div className={'w-full text-center mt-4'}>
 
                 <Link to={"/documentation"} className='text-[#6f6f6f]  underline '
-                      target={"_blank"}>Documentation</Link>
+                     >Documentation</Link>
             </div>
         </section>
     )
