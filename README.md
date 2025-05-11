@@ -23,6 +23,6 @@ It supports rich colors, multiple types (`success`, `error`, `warning`, `info`, 
 ## 📦 Installation
 
 ```bash
-npm install buzzly-toast
+npm i buzzly
 # or
 yarn add buzzly-toast
