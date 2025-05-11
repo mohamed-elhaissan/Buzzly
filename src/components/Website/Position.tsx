@@ -19,16 +19,17 @@ export default function Position() {
             <div key={index}>
               <button
                 style={{
-                  backgroundColor:
-                    isCLickedButton === index ? "#F3F3F3" : "#fcfcfc",
-                  borderColor:
-                    isCLickedButton !== index ? "#F3F3F3" : "#dbdbdb",
+                  background:
+                    isCLickedButton === index
+                      ? "#8CEECA"
+                      : "#1D1D1D",
+                  color: isCLickedButton === index ? "black" : "#fff",
                 }}
                 onClick={() => {
                   setIsCLickedButton(index);
                   setActivatedButton(position);
                 }}
-                className="codeText text-sm   hover:bg-[#F3F3F3] transition duration-75 ease-in p-2 px-4 rounded cursor-pointer border "
+                className="codeText text-sm   hover:bg-[#F3F3F3] transition duration-75 ease-in p-2 px-4 rounded cursor-pointer  "
               >
                 {position}
               </button>
@@ -37,19 +38,17 @@ export default function Position() {
           {
             <motion.div
               variants={itemVariants}
-              style={{
-                background: "linear-gradient(to top, #f8f8f8, #fcfcfc 8px)",
-              }}
+           
               initial="closed"
               animate="open"
-              className="bg-[var(--codeBackground)] dark:bg-[#171716] dark:text-white dark:border-[#2e2e2d] border mt-5 w-full border-[#e4e4e7] flex justify-between items-center py-4 px-5 rounded"
+              className=" text-white  mt-5 w-full border bg-[#111111] border-[#2e2e2d]  flex justify-between items-center py-4 px-5 rounded"
             >
               {activatedButton ? (
                 <motion.p
                   variants={itemVariants}
                   initial="closed"
                   animate="open"
-                  className="codeBlock dark:text-black text-sm"
+                  className="codeBlock text-black text-sm"
                 >
                   {"<"}
                   <span className="text-[#D73A49]">Toaster</span> position=
