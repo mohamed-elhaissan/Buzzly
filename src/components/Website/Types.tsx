@@ -2,7 +2,7 @@ import { useState } from "react";
 import CopyButton from "./CopyButton.tsx";
 import { motion } from "framer-motion";
 
-import { toast } from "../Toast/index.ts";
+import { toast } from "../../../lib/index.ts";
 
 interface TypesSnippet {
   name: string;

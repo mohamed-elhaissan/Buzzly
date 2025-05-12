@@ -8,7 +8,7 @@ import Footer from "./Footer.tsx";
 import { useEffect, useState } from "react";
 import Loading from "./Loading.tsx";
 import Scroll from "./Scroll.tsx";
-import { Toaster, toast } from "../Toast/index.ts";
+import { Toaster, toast } from "../../../lib/index.ts";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
