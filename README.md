@@ -26,3 +26,6 @@ Install **Buzzly** via npm or yarn:
 
 ```bash
 npm install buzzly
+
+
+wait for more :)
