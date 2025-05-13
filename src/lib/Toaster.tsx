@@ -1,5 +1,5 @@
 import { useEffect,  useState } from "react";
-import { ToastProps } from "./type";
+import { ToastProps } from "./type.ts";
 import { createPortal } from "react-dom";
 import { AnimatePresence } from "framer-motion";
 import Toast from "./Toast.tsx";
@@ -41,8 +41,8 @@ export function Toaster({
   return createPortal(
     <div className={`fixed ${positionValue} w-1/5  sm:w-1/3  xl:w-1/5 2xl:w-1/6 flex flex-col gap-2  m-4`}>
       <AnimatePresence>
-        {toasts?.map((toast) => (
-          <div key={toast.id} >
+        {toasts?.map((toast,index) => (
+          <div key={toast.id} style={{ zIndex: 10+index }}>
             <Toast
               initial={initial}
               animate={animate}
