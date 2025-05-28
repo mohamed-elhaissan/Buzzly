@@ -1,2 +1,4 @@
-export { toast } from './toast'
-export { Toaster } from './Toaster'
+export * from './toast-manager'
+export * from './Toaster'
+export * from "./Toast";
+export * from './type'
