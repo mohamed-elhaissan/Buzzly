@@ -14,11 +14,11 @@ export default function Usage() {
               <span className="text-[#00BBFF] font-semibold codeBlock">
                 import
               </span>{" "}
-              {"      { Toaster, Toast }    "}
+              {"      { Toaster, toast }    "}
               <span className="text-[#00BBFF] font-semibold codeBlock">
                 from
               </span>{" "}
-              <span className="text-[#bb88ff]">{"   'Buzzly'  "}</span>
+              <span className="text-[#bb88ff]">{"   'buzzly'  "}</span>
             </p>
             <p className="my-3">{"// ..."}</p>
             <p className="my-3 codeBlock ">

@@ -1,8 +1,8 @@
 import { ToastProps } from "./type";
 
-type ToastListener = (toast: ToastProps) => void;
+export type ToastListener = (toast: ToastProps) => void;
 
-class ToastManager {
+export class ToastManager {
   private listnner = new Set<ToastListener>();
 
   //function to add a listener

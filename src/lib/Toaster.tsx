@@ -3,7 +3,7 @@ import { ToastProps } from "./type.ts";
 import { createPortal } from "react-dom";
 import { AnimatePresence } from "framer-motion";
 import Toast from "./Toast.tsx";
-import { toast } from "./toast.ts";
+import { toast } from "./toast-manager.ts";
 import { getPosition, getToastAnimation } from "./assets.tsx";
 
 interface CustomProps {
