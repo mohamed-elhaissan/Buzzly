@@ -1,0 +1,15 @@
+:root{
+
+    /* success Toast */
+    --success-background : #d1fae5;
+    --success-border-color :#d1fae5;
+     
+}
+
+
+.toast {
+    border-width: 1px;
+    border-style: solid;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
