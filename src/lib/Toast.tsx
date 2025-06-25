@@ -23,7 +23,7 @@ export default function Toast({
       initial={initial}
       animate={animate}
       exit={exit}
-      className={`w-full  p-4 flex gap-3 items-center justify-start toast text-sm rounded-md ${toatBackgroundColor} shadow-md `}
+      className={`toast ${toatBackgroundColor}`}
     >
       {icon}
       <span>{message}</span>
