@@ -1,4 +1,3 @@
-<img src="https://github.com/mohamed-elhaissan/Buzzly/blob/main/src/assets/screnShoot.svg" />
 
 
 
@@ -13,5 +12,6 @@ npm install buzzly
 
 
 ## Documentation
+
 
 Find the full API reference in the [documentation](www.google.com).
