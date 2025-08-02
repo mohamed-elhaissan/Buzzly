@@ -1,17 +1,11 @@
 
 
 
-
-## Usage
-
-To start using the library, install it in your project:
-
 ```bash
-npm install buzzly
+npm i buzzly
 ```
-
 
 ## Documentation
 
-
-Find the full API reference in the [documentation](www.google.com).
+Find Docs : [here](https://buzzly-gamma.vercel.app/)
+Find Code  : [here](https://github.com/mohamed-elhaissan/Buzzly)
