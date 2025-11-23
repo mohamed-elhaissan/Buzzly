@@ -1,21 +1,61 @@
 {
   "name": "buzzly",
-  "version": "1.1.2",
+  "version": "1.0.0",
+  "description": "A beautiful, animated toast notification library for React with Tailwind CSS",
   "type": "module",
+  "main": "dist/Buzzly.umd.cjs",
+  "module": "dist/Buzzly.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/Buzzly.umd.cjs",
+      "import": "./dist/Buzzly.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "react",
+    "toast",
+    "notification",
+    "buzzly",
+    "tailwindcss",
+    "framer-motion",
+    "react-component",
+    "alert",
+    "message",
+    "snackbar",
+    "ui"
+  ],
+  "author": "Mohamed elhaissan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohamed-elhaissan/Buzzly.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mohamed-elhaissan/Buzzly/issues"
+  },
+  "homepage": "https://github.com/mohamed-elhaissan/Buzzly#readme",
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "dependencies": {
     "framer-motion": "^12.9.2",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-icons": "^5.5.0",
-    "react-router-dom": "^7.5.2",
-    "react-syntax-highlighter": "^15.6.1",
-    "vite-plugin-dts": "^4.5.4"
+    "react-icons": "^5.5.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
@@ -30,35 +70,9 @@
     "globals": "^16.0.0",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.26.1",
-    "vite": "^6.3.1"
-  },
-  "peerDependencies": {
+    "vite": "^6.3.1",
+    "vite-plugin-dts": "^4.5.4",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
-  },
-  "main": "dist/Buzzly.umd.cjs",
-  "module": "dist/Buzzly.js",
-  "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/Buzzly.umd.cjs",
-      "import": "./dist/Buzzly.js"
-    },
-    "./package.json": "./package.json",
-    "./dist/*": "./dist/*"
-  },
-  "files": [
-    "dist"
-  ],
-  "keywords": [
-    "react",
-    "toast",
-    "notification",
-    "buzzly",
-    "tailwindcss",
-    "framer-motion"
-  ],
-  "author": "Mohamed elhaissan",
-  "license": "MIT"
+  }
 }
