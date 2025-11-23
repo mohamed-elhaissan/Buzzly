@@ -1,12 +1,9 @@
-import PageRoutes from "./Routes.tsx";
-
 function App() {
 
-  return (
-    <div className=''>
-      <PageRoutes />
-    </div>
-  )
+    return (
+        <div className=''>
+        </div>
+    )
 }
 
 export default App
