@@ -5,7 +5,6 @@ export type ToastListener = (toast: ToastProps) => void;
 export class ToastManager {
   private listnner = new Set<ToastListener>();
 
-  //function to add a listener
   private emit(toast: ToastProps) {
     //generate a random id for the toast
     const id = crypto.randomUUID();
@@ -14,7 +13,6 @@ export class ToastManager {
     });
   }
 
-  //methodes
   success(message: string) {
     this.emit({ type: "success", message  });
   }

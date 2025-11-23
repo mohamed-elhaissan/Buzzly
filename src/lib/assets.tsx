@@ -30,7 +30,7 @@ const getBackgroundColor = ({
       case "error":
         return "error-toast";
       case "info":
-        return "info-taost";
+        return "info-toast";
       default:
         return "default-toast";
     }
@@ -103,8 +103,7 @@ const getToastAnimation = (toastPosition: string) => {
       };
   }
 };
-const successIcon = (
-  <svg
+const successIcon = (<svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 20 20"
     fill="currentColor"
