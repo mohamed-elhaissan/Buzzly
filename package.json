@@ -1,6 +1,6 @@
 {
   "name": "buzzly",
-  "version": "1.0.0",
+  "version": "1.1.4",
   "description": "A beautiful, animated toast notification library for React with Tailwind CSS",
   "type": "module",
   "main": "dist/Buzzly.umd.cjs",
@@ -43,15 +43,15 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mohamed-elhaissan/Buzzly.git"
+    "url": "git+https://github.com/mohamed-elhaissan/Buzzly.git"
   },
   "bugs": {
     "url": "https://github.com/mohamed-elhaissan/Buzzly/issues"
   },
   "homepage": "https://github.com/mohamed-elhaissan/Buzzly#readme",
   "peerDependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
   },
   "dependencies": {
     "framer-motion": "^12.9.2",
