@@ -10,24 +10,24 @@ export const injectStyles = () => {
     style.id = styleID
     style.textContent = `:root {
     /* success Toast */
-    --success-background: #d1fae5;
-    --success-border-color: #d1fae5;
-    --success-text-color: #10b981;
+    --success-background: oklch(72.3% 0.219 149.579/0.2);
+    --success-border-color: oklch(72.3% 0.219 149.579/0.9);
+    --success-text-color: oklch(72.3% 0.219 149.579);
     /* warning Toast */
-    --warning-background: white;
-    --warning-border-color: #fef9c3;
-    --warning-text-color: #eab308;
+    --warning-background: oklch(70.5% 0.213 47.604/0.2);
+    --warning-border-color: oklch(70.5% 0.213 47.604/0.9);
+    --warning-text-color: oklch(70.5% 0.213 47.604);
     /* error Toast */
-    --error-background: #fecaca;
-    --error-border-color: #fecaca;
-    --error-text-color: #ef4444;
+    --error-background: oklch(63.7% 0.237 25.331/0.2);
+    --error-border-color: oklch(63.7% 0.237 25.331/0.9);
+    --error-text-color: oklch(63.7% 0.237 25.331);
     /* info Toast */
-    --info-background: #bfdbfe;
-    --info-border-color: #bfdbfe;
-    --info-text-color: #3b82f6;
+    --info-background: oklch(62.3% 0.214 259.815/0.2);
+    --info-border-color: oklch(62.3% 0.214 259.815/0.9);
+    --info-text-color: oklch(62.3% 0.214 259.815);
     /* default Toast */
     --background: white;
-    --border-color: #bfdbfe;
+    --border-color: #BEC0C5;
     --text-color: #6b7280;
 }
 
@@ -45,6 +45,8 @@ export const injectStyles = () => {
     padding: 1rem;
     gap: 0.5rem;
     display: flex;
+    border-width: 1px;
+    border-style: solid;
     align-items: center;
     justify-content: start;
     font-size: 0.9rem;
@@ -81,6 +83,8 @@ export const injectStyles = () => {
     border-color: var(--info-border-color);
     color: var(--info-text-color);
 }
+
+
 `
     document.head.appendChild(style)
 }

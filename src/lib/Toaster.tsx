@@ -5,7 +5,6 @@ import { AnimatePresence } from "framer-motion";
 import Toast from "./Toast.tsx";
 import { toast } from "./toast-manager.ts";
 import { getPosition, getToastAnimation } from "./assets.tsx";
-import "./syles.css";
 
 interface CustomProps {
   type?: ToastProps;
