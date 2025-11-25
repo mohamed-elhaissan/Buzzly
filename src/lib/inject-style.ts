@@ -8,27 +8,30 @@ export const injectStyles = () => {
     }
     const style = document.createElement('style');
     style.id = styleID
-    style.textContent = `:root {
+    style.textContent = `
+    @import url("https://cdn.jsdelivr.net/npm/@geist-ui/fonts@latest/font.css");
+
+    :root {
     /* success Toast */
-    --success-background: oklch(72.3% 0.219 149.579/0.2);
-    --success-border-color: oklch(72.3% 0.219 149.579/0.9);
-    --success-text-color: oklch(72.3% 0.219 149.579);
+    --success-background: #d2f3d7;
+    --success-border-color: #9be4a6;
+    --success-text-color: #2dc744;
     /* warning Toast */
-    --warning-background: oklch(70.5% 0.213 47.604/0.2);
-    --warning-border-color: oklch(70.5% 0.213 47.604/0.9);
-    --warning-text-color: oklch(70.5% 0.213 47.604);
+    --warning-background: #fff3e7;
+    --warning-border-color: #ffb575;
+    --warning-text-color: #ff9f4c;
     /* error Toast */
-    --error-background: oklch(63.7% 0.237 25.331/0.2);
-    --error-border-color: oklch(63.7% 0.237 25.331/0.9);
-    --error-text-color: oklch(63.7% 0.237 25.331);
+    --error-background: #fdd6d4;
+    --error-border-color: #fba19c;
+    --error-text-color: #f53126;
     /* info Toast */
-    --info-background: oklch(62.3% 0.214 259.815/0.2);
-    --info-border-color: oklch(62.3% 0.214 259.815/0.9);
-    --info-text-color: oklch(62.3% 0.214 259.815);
+    --info-background: #cce2fd;
+    --info-border-color: #8ec0fb;
+    --info-text-color: #1079f6;
     /* default Toast */
     --background: white;
-    --border-color: #BEC0C5;
-    --text-color: #6b7280;
+    --border-color: #f3f3f3;
+    --text-color: #171717;
 }
 
 .toast-container {
@@ -41,6 +44,8 @@ export const injectStyles = () => {
 }
 
 .toast {
+    font-family: 'Geist', sans-serif;
+    letter-spacing: -0.025em;
     width: 100%;
     padding: 1rem;
     gap: 0.5rem;
