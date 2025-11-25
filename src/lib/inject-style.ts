@@ -88,6 +88,44 @@ export const injectStyles = () => {
     border-color: var(--info-border-color);
     color: var(--info-text-color);
 }
+.top-left {
+  top: 0;
+  left: 0;
+
+}
+
+.top-right {
+  top: 0;
+  right: 0;
+
+}
+
+.bottom-left {
+  bottom: 0;
+  left: 0;
+
+}
+
+.bottom-right {
+  bottom: 0;
+  right: 0;
+
+}
+
+/* Center positions */
+.top-center {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+.bottom-center {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
 
 
 `

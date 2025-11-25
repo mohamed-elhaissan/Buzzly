@@ -41,19 +41,19 @@ const getBackgroundColor = ({
 const getPosition = (position: string) => {
     switch (position) {
         case "top-left":
-            return "top-0 left-0";
+            return "top-left";
         case "top-right":
-            return "top-0 right-0";
+            return "top-right";
         case "bottom-left":
-            return "bottom-0 left-0";
+            return "bottom-left";
         case "bottom-right":
-            return "bottom-0 right-0";
+            return "bottom-right";
         case "top-center":
-            return "top-0 left-1/2 transform -translate-x-1/2";
+            return "top-center";
         case "bottom-center":
-            return "bottom-0 left-1/2 transform -translate-x-1/2";
+            return "bottom-center";
         default:
-            return "bottom-0 right-0";
+            return "bottom-right";
     }
 };
 
