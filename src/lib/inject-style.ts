@@ -131,11 +131,3 @@ export const injectStyles = () => {
 `
     document.head.appendChild(style)
 }
-if (typeof window !== 'undefined') {
-    if (document.readyState == 'loading') {
-        document.addEventListener('DOMContentLoaded', injectStyles);
-
-    } else {
-        injectStyles()
-    }
-}
